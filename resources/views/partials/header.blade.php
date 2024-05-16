@@ -6,12 +6,14 @@
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse d-flex justify-content-between " id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                     <a class="nav-link" href="{{ route('comics.index') }}">DC Comics</a>
-                    <a class="nav-link" href="#">Inserisci nuovo fumetto</a>
                     <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
+                </div>
+                <div>
+                    <a class="btn bg-dark text-white" href="{{ route('comics.create') }}">Inserisci nuovo fumetto</a>
                 </div>
             </div>
         </div>

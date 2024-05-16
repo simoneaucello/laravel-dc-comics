@@ -11,7 +11,6 @@
                 <div class="card-body">
                     <h5 class="card-title fw-bolder">{{ $comic->title }}</h5>
 
-                    <p class="card-text">{{ $comic->artists }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">{{ $comic->price }}</li>
@@ -19,8 +18,7 @@
                     <li class="list-group-item">{{ $comic->sale_date }}</li>
                 </ul>
                 <div class="card-body">
-                    <a href="{{ route('comics.show', $comic) }}" class="card-link btn bg-dark text-white">Descrizione
-                        Fumetto</a>
+                    <a href="{{ route('comics.show', $comic) }}" class="card-link btn bg-dark text-white">DETTAGLI</a>
                 </div>
             </div>
         @endforeach
