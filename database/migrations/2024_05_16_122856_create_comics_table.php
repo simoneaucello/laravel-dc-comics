@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('slug', 50)->unique();
             $table->string('series');
             $table->string('sale_date', 25);
-            $table->string('type', 50);
-            $table->string('artists');
-            $table->string('writers');
+            $table->string('type', 50)->nullable();
+            $table->string('artists')->nullable();
+            $table->string('writers')->nullable();
             $table->timestamps();
         });
     }
