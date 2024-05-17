@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <div class="container">
+    <div class="container mb-5">
         <h1 class="my-5 text-center text-bg-dark title-index ">FUMETTI</h1>
         @if (session('deleted'))
             <div class="alert alert-success" role="alert">
