@@ -6,6 +6,14 @@
 
 @section('content')
     <div class="container d-flex my-5 ">
+
+        <div>
+            <a href="{{ route('comics.edit', $comic) }}" class="card-link btn bg-warning text-dark mb-3"><i
+                    class="fa-solid fa-pen"></i></a>
+            {{-- DELETE FORM  --}}
+            @include('partials.formdelete')
+        </div>
+
         <img class="img-show me-5" src="{{ $comic->thumb }}" alt=" {{ $comic->title }} ">
         <div>
             <h2 class="text-warning">{{ $comic->title }}</h2>
@@ -17,6 +25,8 @@
             <p class="mt-3 fw-bold text-warning"> Scrittori: <br> <span class="text-white"> {{ $comic->writers }} </span>
             </p>
             <p class="mt-3 fw-bold text-danger"> PREZZO: {{ $comic->price }} </p>
+
+
 
         </div>
 
