@@ -1,11 +1,12 @@
 @extends('layout.main')
 
 @section('title')
-    Aggiungi fumetto
+    Modifica fumetto
 @endsection
 
 @section('content')
     <div class="container my-5">
+        <h1 class="text-white">Modifica Fumetto:</h1>
         <h1 class="text-warning mb-5">{{ $comic->title }}</h1>
         <form action="{{ route('comics.update', $comic) }}" method="POST">
             @csrf

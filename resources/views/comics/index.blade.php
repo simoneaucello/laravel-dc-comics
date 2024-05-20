@@ -6,7 +6,7 @@
         <h1 class="my-5 text-center text-bg-dark title-index ">FUMETTI</h1>
         @if (session('deleted'))
             <div class="alert alert-success" role="alert">
-                Il fumetto è stato eliminato correttamente.
+                {{ session('deleted') }}
             </div>
         @endif
         <div class="d-flex flex-wrap justify-content-around  ">

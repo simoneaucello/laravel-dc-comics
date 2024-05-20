@@ -6,7 +6,19 @@
 
 @section('content')
     <div class="container my-5">
-        <h1 class="text-warning mb-5">Nuovo fumetto</h1>
+        <h1 class="text-warning mb-5">Nuovo fumetto:</h1>
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>
+                            {{ $error }}
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{ route('comics.store') }}" method="POST"> @csrf
 
             <div class="mb-3 bg-body-tertiary rounded p-2">
