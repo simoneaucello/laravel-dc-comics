@@ -26,6 +26,7 @@ class ComicRequest extends FormRequest
             'description' => 'required|min:10|',
             'thumb' => 'required|min:5',
             'price' => 'required|min:2|max:20',
+            'series' => 'required|min:2',
             'sale_date' => 'required|min:4|max:25'
         ];
     }
@@ -42,6 +43,8 @@ class ComicRequest extends FormRequest
             'thumb.min' => 'L\'url deve contenere almeno :min caratteri',
             'price.required' => 'Il prezzo è un campo obbligatorio',
             'price.min' => 'Il prezzo deve contenere almeno :min caratteri',
+            'series.required' => 'La serie è un campo obbligatorio',
+            'series.min' => 'La serie deve contenere almeno :min caratteri',
             'sale_date.required' => 'La data di uscita è un campo obbligatorio',
             'sale_date.min' => 'La data di uscita deve contenere almeno :min caratteri'
         ];
